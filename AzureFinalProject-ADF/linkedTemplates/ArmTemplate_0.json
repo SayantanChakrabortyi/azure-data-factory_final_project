@@ -826,14 +826,7 @@
 					{
 						"name": "cloud to cloud Execute Pipeline",
 						"type": "ExecutePipeline",
-						"dependsOn": [
-							{
-								"activity": "api to cloud Execute Pipeline",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"secureInput": false
 						},
