@@ -13,7 +13,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/source/blobs/",
+			"blobPathBeginsWith": "/source/blobs/Cloud Data Files/",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls",
 			"events": [
