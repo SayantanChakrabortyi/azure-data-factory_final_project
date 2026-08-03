@@ -35,6 +35,10 @@
 			"type": "string",
 			"defaultValue": "https://dummy.restapiexample.com"
 		},
+		"trigger cloud to cloud_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -82,6 +86,9 @@
 					},
 					"ls_rest_properties_typeProperties_url": {
 						"value": "[parameters('ls_rest_properties_typeProperties_url')]"
+					},
+					"trigger cloud to cloud_properties_typeProperties_scope": {
+						"value": "[parameters('trigger cloud to cloud_properties_typeProperties_scope')]"
 					}
 				}
 			},
