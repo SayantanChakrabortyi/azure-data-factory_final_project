@@ -1,0 +1,15 @@
+{
+	"name": "AzureFinalProject-ADF",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "09e06ab0-84bd-48ef-9060-4ec8681dc8b1",
+		"tenantId": "2b89b218-c2d5-46bd-abc1-285b9e3169fe"
+	}
+}
