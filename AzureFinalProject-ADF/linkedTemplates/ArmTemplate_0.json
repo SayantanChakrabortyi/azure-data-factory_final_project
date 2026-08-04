@@ -900,7 +900,8 @@
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('event trigger cloud to cloud_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated"
+						"Microsoft.Storage.BlobCreated",
+						"Microsoft.Storage.BlobDeleted"
 					]
 				}
 			},
