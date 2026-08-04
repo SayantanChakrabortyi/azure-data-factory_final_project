@@ -28,6 +28,9 @@
 		},
 		"trigger cloud to cloud_properties_typeProperties_scope": {
 			"value": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
+		},
+		"event trigger adls to adls_properties_typeProperties_scope": {
+			"value": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
 		}
 	}
 }

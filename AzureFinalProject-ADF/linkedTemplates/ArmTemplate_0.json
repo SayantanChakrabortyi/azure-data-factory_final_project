@@ -38,6 +38,10 @@
 		"trigger cloud to cloud_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
+		},
+		"event trigger adls to adls_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
 		}
 	},
 	"variables": {
@@ -196,6 +200,26 @@
 					"url": "[parameters('ls_rest_properties_typeProperties_url')]",
 					"enableServerCertificateValidation": true,
 					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger cloud to cloud')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/source/blobs/Cloud Data Files/",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('trigger cloud to cloud_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
 				}
 			},
 			"dependsOn": []
@@ -855,7 +879,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/trigger cloud to cloud')]",
+			"name": "[concat(parameters('factoryName'), '/event trigger adls to adls')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -872,9 +896,9 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/source/blobs/",
+					"blobPathBeginsWith": "/source/blobs/Cloud Data Files/",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('trigger cloud to cloud_properties_typeProperties_scope')]",
+					"scope": "[parameters('event trigger adls to adls_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]
