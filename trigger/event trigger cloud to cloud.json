@@ -1,5 +1,5 @@
 {
-	"name": "event trigger adls to adls",
+	"name": "event trigger cloud to cloud",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
