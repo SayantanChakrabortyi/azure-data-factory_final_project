@@ -39,7 +39,7 @@
 			"type": "string",
 			"defaultValue": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
 		},
-		"event trigger adls to adls_properties_typeProperties_scope": {
+		"event trigger cloud to cloud_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/8de0c1a6-8762-462e-bb1b-d06c5d71feab/resourceGroups/AzureFinalProject/providers/Microsoft.Storage/storageAccounts/azurefinalprojectadls"
 		}
@@ -879,7 +879,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/event trigger adls to adls')]",
+			"name": "[concat(parameters('factoryName'), '/event trigger cloud to cloud')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -898,7 +898,7 @@
 				"typeProperties": {
 					"blobPathBeginsWith": "/source/blobs/Cloud Data Files/",
 					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('event trigger adls to adls_properties_typeProperties_scope')]",
+					"scope": "[parameters('event trigger cloud to cloud_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]
